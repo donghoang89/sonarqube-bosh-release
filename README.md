@@ -81,7 +81,6 @@ $ bosh -d sonarqube-bosh deploy manifest.yml
 ```
 
 The deployment will most likely say it's failed:
-
 ```
 Task xx
 
