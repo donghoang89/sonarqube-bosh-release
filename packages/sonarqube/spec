@@ -1,0 +1,9 @@
+---
+name: sonarqube
+
+dependencies:
+  - java
+
+files:
+  - sonarqube/sonarqube-6.5.zip
+ 

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+JOB=sonarqube
+RUN_DIR=/var/vcap/sys/run/$JOB
+LOG_DIR=/var/vcap/sys/log/$JOB
+PIDFILE=$RUN_DIR/$JOB.pid
+CONF_DIR=/var/vcap/jobs/$JOB/config
+SONARCTL=/var/vcap/packages/$JOB/bin/linux-x86-64/sonar.sh
+APSTART=/var/vcap/sys/log/$JOB/start.log
+
+export JAVA_HOME=/var/vcap/packages/java
+export PATH=$JAVA_HOME/bin:$PATH
+
+case $1 in
+
+  start)
+    mkdir -p $RUN_DIR
+    mkdir -p $LOG_DIR
+
+    $SONARCTL start >> $APSTART 2>&1
+    ;;
+
+  stop)
+    $SONARCTL stop  >> $APSTART 2>&1
+    ;;
+
+  *)
+  echo "Usage: ${JOB}_ctl {start|stop}" ;;
+esac
+exit 0
+

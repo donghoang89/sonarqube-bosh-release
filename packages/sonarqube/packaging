@@ -1,0 +1,6 @@
+set -e
+
+echo "Extracting sonarqube..."
+unzip sonarqube/sonarqube-6.5.zip
+mv sonarqube-6.5/*  ${BOSH_INSTALL_TARGET}
+
