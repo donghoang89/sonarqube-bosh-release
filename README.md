@@ -80,6 +80,33 @@ Finally deploy the release (assuming you've uploaded a stemcell):
 $ bosh -d sonarqube-bosh deploy manifest.yml
 ```
 
+The deployment will most likely say it's failed:
+
+```
+Task xx
+
+10:40:29 | Deprecation: Ignoring cloud config. Manifest contains 'networks' section.
+10:40:29 | Preparing deployment: Preparing deployment (00:00:00)
+10:40:29 | Preparing package compilation: Finding packages to compile (00:00:00)
+10:40:29 | Updating instance sonarqube: sonarqube/<uuid> (0) (canary) (00:01:26)
+            L Error: 'sonarqube/0 (<uuid>)' is not running after update. Review logs for failed jobs: sonarqube
+
+10:41:55 | Error: 'sonarqube/0 (<uuid>)' is not running after update. Review logs for failed jobs: sonarqube
+
+Started  Fri Aug 11 10:40:29 UTC 2017
+Finished Fri Aug 11 10:41:55 UTC 2017
+Duration 00:01:26
+
+Task xx error
+
+Updating deployment:
+  Expected task '17' to succeed but state is 'error'
+
+Exit code 1
+```
+
+But SonarQube will be running. It's likely the above error is due to monit using the wrond pid (to be fixed).
+
 ## Success!
 Assuming you've setup a route to the VirtualBox network:
 ```
