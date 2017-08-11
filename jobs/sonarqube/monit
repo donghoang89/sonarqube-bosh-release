@@ -1,0 +1,5 @@
+check process sonarqube
+  with pidfile /var/vcap/sys/run/sonarqube/sonarqube.pid
+  start program "/var/vcap/jobs/sonarqube/bin/sonarqube_ctl start" with timeout 60 seconds
+  stop program "/var/vcap/jobs/sonarqube/bin/sonarqube_ctl stop" with timeout 60 seconds
+  group vcap

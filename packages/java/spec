@@ -1,0 +1,8 @@
+---
+name: java
+
+dependencies: []
+
+files:
+  - java/jdk1.8.0_144.tar.gz
+

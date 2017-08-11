@@ -1,0 +1,12 @@
+---
+name: sonarqube
+
+templates:
+  sonarqube_ctl.erb: bin/sonarqube_ctl
+
+packages:
+  - java
+  - sonarqube
+
+properties: {}
+
