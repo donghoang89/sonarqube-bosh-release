@@ -4,5 +4,5 @@ name: java
 dependencies: []
 
 files:
-  - java/jdk1.8.0_144.tar.gz
+  - java/jdk-1.8.0_144-linux-x64.tar.gz
 

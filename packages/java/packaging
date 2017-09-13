@@ -2,7 +2,7 @@ set -e
 
 JAVA_VERSION="1.8.0_144"
 
-archive="java/jdk${JAVA_VERSION}.tar.gz"
+archive="java/jdk-${JAVA_VERSION}-linux-x64.tar.gz
 
 echo "Extracting archive..."
 tar xzf $archive
@@ -11,4 +11,3 @@ mv jdk${JAVA_VERSION}/* ${BOSH_INSTALL_TARGET}
 
 export JAVA_HOME=${BOSH_INSTALL_TARGET}
 export PATH=$PATH:$JAVA_HOME/bin
-
