@@ -1,1 +1,8 @@
---- {}
+java/jdk-1.8.0_144-linux-x64.tar.gz:
+  size: 185515842
+  object_id: e78af84d-097a-479b-66ac-c09ee5c9a6b6
+  sha: d4c4f02908d39827393dd77f9eb8da348363efda
+sonarqube/sonarqube-6.5.zip:
+  size: 143286376
+  object_id: 6c73cea9-0903-47d3-6705-ec4ef6e4431a
+  sha: 266051af830e1462f3455802326a52ba6f86efd9

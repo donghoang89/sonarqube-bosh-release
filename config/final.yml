@@ -1,1 +1,6 @@
 name: sonarqube-bosh
+blobstore:
+  provider: s3
+  options:
+    bucket_name: bosh-blobstore-09876
+    host: storage.googleapis.com
